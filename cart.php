@@ -14,12 +14,14 @@ if (isset($_GET['adicionar'])) {
         }
  }
 
-foreach ($_SESSION['carrinho'] as $key => $value) {
-    //Nome do produto
-    //Quantidade
-    //preço
-    echo '<div class="cart-item">';
-    echo '<p>Nome: '.$value['nome'].' | Quantidade: '.$value['quantidade'].' | Preço: R$ '.($value['quantidade']*$value['preco']).',00</p>';
-    echo '</div>';
-}
+ if (isset($_SESSION['carrinho'])) {
+     foreach ($_SESSION['carrinho'] as $key => $value) {
+         //Nome do produto
+         //Quantidade
+         //preço
+         echo '<div class="cart-item">';
+         echo '<p>Nome: '.$value['nome'].' | Quantidade: '.$value['quantidade'].' | Preço: R$ '.($value['quantidade']*$value['preco']).',00</p>';
+         echo '</div>';
+     }
+ }
 ?>

@@ -1,7 +1,6 @@
 <?php
 session_start();
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -11,6 +10,9 @@ session_start();
     <title>Carrinho de compras</title>
 
     <link rel="stylesheet" href="./style.css">
+    
+    <script src="https://kit.fontawesome.com/dc49a974a4.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -43,8 +45,11 @@ session_start();
                     </h4>
                 </div>
 
-                <a href="?adicionar=<?php echo $key ?>">
-                    <button>Adicionar ao carrinho</button>
+                <a href="?adicionar=<?php echo $key ?>" class="addInCart">
+                    <button>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        Adicionar ao carrinho
+                    </button>
                 </a>
             </div>
 
