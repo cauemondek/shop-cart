@@ -41,4 +41,7 @@ $(document).ready(() => {
             window.location.reload();
         }, 3500);
     }
+
+    const year = document.querySelector('#ano');
+    year.innerHTML = new Date().getFullYear();
 });

@@ -238,3 +238,20 @@ main {
         scale: 1;
     }
 }
+
+footer {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    opacity: 0.5;
+}
+
+footer p, footer span {
+    cursor: default;
+    color: #000000;
+    font-weight: 500;
+    user-select: none;
+}

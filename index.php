@@ -89,6 +89,10 @@ session_start();
         ?>
     </main>
 
+    <footer>
+        <p>&copy; Cauê Guise Mondek - Todos os direitos reservados, <span id="ano"></span></p>
+    </footer>
+    
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
     <script src="./app.js"></script>
 </body>
