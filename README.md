@@ -7,7 +7,7 @@
 
 **Not available yet.**
 
-# 🛠️ Abrir e rodar o projeto
+## 🛠️ Open and run the project
 
 **Not available yet.**
 

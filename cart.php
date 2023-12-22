@@ -13,6 +13,7 @@ if (isset($_GET['adicionar'])) {
     }
 }
 
+
 if (isset($_SESSION['carrinho'])) {
     foreach ($_SESSION['carrinho'] as $key => $value) {
         echo '<div class="cart-item">';
@@ -24,5 +25,14 @@ if (isset($_SESSION['carrinho'])) {
         echo '</div>';
         echo '</div>';
     }
+} else {
+    echo '<div class="cart-empty" id="cartEmpty">';
+    echo '<i class="fa-solid fa-cart-plus fa-2xl"></i>';
+    echo '<div class="desc-empty">';
+    echo '<h2>Seu carrinho está vazio</h2>';
+    echo '<p>Navegue pela loja e adicione algum produto.</p>';
+    echo '</div>';
+    echo '</div>';
 }
+
 ?>

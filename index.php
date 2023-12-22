@@ -12,6 +12,9 @@ session_start();
     <link rel="stylesheet" href="./style.css">
 
     <script src="https://kit.fontawesome.com/dc49a974a4.js" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -20,7 +23,7 @@ session_start();
             <p>carrinho</p>
             <h1>PHP</h1>
         </div>
-        <i class="fa-solid fa-cart-shopping fa-xl"></i>
+        <i class="fa-solid fa-cart-shopping fa-xl" id="clickCart"></i>
     </header>
     <main>
         <div class="productsContainer">
@@ -64,14 +67,30 @@ session_start();
 
         <div class="cart">
             <h1>Seu carrinho</h1>
-        <?php
+            <?php
             include('cart.php');
-        ?>
-            <button class="buttonPurshase">Finalizar compra</button>
+            ?>
+            <a href="?finalizar=<?php echo $key ?>" id="purshace">
+                <button class="buttonPurshace">Finalizar compra</button>
+            </a>
         </div>
+
+        <?php
+        if (isset($_GET['finalizar'])) {
+            if (isset($_SESSION['carrinho'])) {
+                session_destroy();
+                // echo '<script>window.location.reload();</script>';
+                echo '<div id="purshaceComplete">';
+                echo '<i class="fa-solid fa-circle-check fa-2xl"></i>';
+                echo '<h1>Compra finalizada</h1>';
+                echo '</div>';
+            }
+        }
+        ?>
     </main>
 
-
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+    <script src="./app.js"></script>
 </body>
 
 </html>
