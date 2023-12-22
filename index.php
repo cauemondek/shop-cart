@@ -16,8 +16,11 @@ session_start();
 
 <body>
     <header>
-        <p>carrinho</p>
-        <h1>PHP</h1>
+        <div>
+            <p>carrinho</p>
+            <h1>PHP</h1>
+        </div>
+        <i class="fa-solid fa-cart-shopping fa-xl"></i>
     </header>
     <main>
         <div class="productsContainer">
@@ -60,13 +63,12 @@ session_start();
         </div> <!--products container-->
 
         <div class="cart">
-            <h1>Items do carrinho:</h1>
-
-        </div>
-
+            <h1>Seu carrinho</h1>
         <?php
-        include('cart.php');
+            include('cart.php');
         ?>
+            <button class="buttonPurshase">Finalizar compra</button>
+        </div>
     </main>
 
 

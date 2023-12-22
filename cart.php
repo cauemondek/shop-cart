@@ -20,10 +20,9 @@ if (isset($_SESSION['carrinho'])) {
         echo '<div class="cart-desc-item">';
         echo '<p>Nome: ' . $value['nome'] . '</p>';
         echo '<p>Quantidade: ' . $value['quantidade'] . '</p>';
-        echo '<p>Preço: R$ ' . ($value['quantidade'] * $value['preco']) . ',00</p>';
+        echo '<p class="priceDesc">Preço: R$ ' . ($value['quantidade'] * $value['preco']) . ',00</p>';
         echo '</div>';
         echo '</div>';
-        echo '<hr>';
     }
 }
 ?>
